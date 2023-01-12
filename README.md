@@ -4,19 +4,20 @@ Check-VAT-PHP
 Verify the validity of a VAT identification via VIES.\
 No additional libraries are needed, just Vanilla (RAW) PHP.
 
-How to use
+USAGE
 ============
 
-Just load in the the function and play around with it:
+Incude the class fille src/check-vat.php
+Then instance the class and load in the the method like this:
 
-    $oResult = checkVat("IE", "6388047V");
+    $oResult = (new viesChecker())->checkVat("IE", "6388047V");
 
 The above code will check IE6388047V in the VIES database and put the result in $aResult as an array.\
 All of the code can easily be adjusted to your needs.
 
 If you rather work with an array you can easily do the following:
 
-    $aResult = (array)checkVat("IE", "6388047V");
+    $aResult = (array)(new viesChecker())->checkVat("IE", "6388047V");
 
 That is all. Goodluck with it :)
 
