@@ -7,14 +7,12 @@ No additional libraries are needed, just Vanilla (RAW) PHP.
 USAGE
 ============
 
-Incude the class fille src/check-vat.php
+Incude the class file src/check-vat.php
 Then instance the class and load in the the method like this:
 
     $oResult = (new viesChecker())->checkVat("IE", "6388047V");
 
-The above code will check IE6388047V in the VIES database and put the result in $aResult as an array.\
-All of the code can easily be adjusted to your needs.
-
+The above code will check IE6388047V in the VIES database and put the result in $oResult as an object.\
 If you rather work with an array you can easily do the following:
 
     $aResult = (array)(new viesChecker())->checkVat("IE", "6388047V");
